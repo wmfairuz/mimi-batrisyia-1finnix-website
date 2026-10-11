@@ -1,0 +1,138 @@
+/* Whole page */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Verdana, sans-serif;
+    background-color: #ffe8cc;
+    color: #4a3528;
+}
+
+/* FRAME: dashed orange border around the whole website */
+.frame {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fffaf3;
+    border: 6px dashed #ff7a00;
+    padding: 10px;
+}
+
+/* BANNER: the big title at the top */
+.banner {
+    background-color: #ff8c1a;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 40px;
+}
+
+.banner p {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Puts the menu on the left and the content on the right */
+.layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* MENU: the list of links on the left */
+.menu {
+    width: 200px;
+    background-color: #ffd199;
+    border-radius: 10px;
+    padding: 15px;
+    align-self: flex-start;
+}
+
+.menu h3 {
+    margin-top: 0;
+    text-align: center;
+    color: #cc5500;
+}
+
+.menu a {
+    display: block;
+    background-color: white;
+    color: #cc5500;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+/* Menu link changes colour when the mouse is on it */
+.menu a:hover {
+    background-color: #ff8c1a;
+    color: white;
+}
+
+/* Content area on the right */
+main {
+    flex: 1;
+}
+
+/* Boxes for each section */
+.box {
+    background-color: white;
+    border-left: 8px solid #ff8c1a;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.box h2 {
+    margin-top: 0;
+    font-family: Georgia, serif;
+    color: #cc5500;
+}
+
+.box p,
+.box li {
+    line-height: 1.6;
+}
+
+/* Table in the About Me box */
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px 15px;
+    border-bottom: 1px solid #ffd199;
+}
+
+th {
+    color: #cc5500;
+}
+
+/* Bottom of the page */
+footer {
+    background-color: #4a3528;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* On small screens (phones), put the menu on top instead */
+@media (max-width: 600px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: auto;
+        align-self: stretch;
+    }
+}
